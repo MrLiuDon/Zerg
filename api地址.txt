@@ -1,0 +1,8 @@
+http://z.cn/api/v1/banner/1
+http://z.cn/api/v1/theme?ids=1,2,3
+http://z.cn/api/v1/product/recent?count=3
+http://z.cn/api/v1/category/all
+http://z.cn/api/v1/product/by_category
+http://z.cn/api/v1/token/user
+http://z.cn/api/v1/product/:id
+http://z.cn/api/v1/address

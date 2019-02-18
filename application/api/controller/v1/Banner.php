@@ -14,14 +14,23 @@ class Banner{
 	 * @id  banner的id号
 	 *
 	 */
-	public function getBanner($id)
-	{
-		(new IDMustBePostiveInt())->goCheck();
-		$banner = BannerModel::getBannerById($id);
+    public function getBanner($id)
+    {
+        $stu = array("name"=>"li","age"=>"35");
+        $stuJson = json_encode($stu);
+        echo $stuJson;
+//输出：{"name":"li","age":"35"}
+
+//json用json_decode转为php对象
+        $stu1 = json_decode($stuJson);
+        echo $stu1->name;
+//输出li
+        (new IDMustBePostiveInt())->goCheck();
+        $banner = BannerModel::getBannerById($id);
 //        $banner->hidden(['update_time']);
-		if (!$banner) {
+        if (!$banner) {
             throw new BannerMissException();
         }
-		return $banner;
-	}
+        return $banner;
+    }
 }
